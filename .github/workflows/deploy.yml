@@ -37,20 +37,18 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build with VitePress
-        run: |
-        cd docs && pnpm run docs:build
-        echo "=== Содержимое packages/lucide-static ==="
-        ls -la packages/lucide-static/ || echo "Папка packages/lucide-static не найдена"
-        echo "=== Содержимое packages/lucide-static/dist ==="
-        ls -la packages/lucide-static/dist/ || echo "Папка packages/lucide-static/dist не найдена"
+        run: cd docs && pnpm run docs:build
+
+      - name: Copy CNAME
+        run: cp CNAME docs/.vercel/output/static/CNAME
 
       - name: Create .nojekyll
-        run: touch packages/lucide-static/dist/.nojekyll
+        run: touch docs/.vercel/output/static/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: packages/lucide-static/dist
+          path: docs/.vercel/output/static
 
   deploy:
     environment:
