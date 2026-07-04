@@ -20,23 +20,30 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-      - name: Setup Node
-        uses: actions/setup-node@v5
-        with:
-          node-version: 20
-          cache: pnpm   # <-- заменили npm на pnpm
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9  # или ваша версия pnpm
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 20
+          cache: pnpm   # теперь pnpm уже установлен, кэш сработает
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
       - name: Build with VitePress
         run: pnpm run docs:build
+
       - name: Create .nojekyll
         run: touch docs/.vitepress/dist/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
