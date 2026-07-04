@@ -69,7 +69,7 @@ const pickIcons = [
   'stethoscope',
 ];
 
-export default {
+const loader = {
   async load() {
     const icons = Object.entries(iconNodes).map(([name, iconNode]) => ({ name, iconNode }));
 
@@ -96,3 +96,7 @@ export default {
     };
   },
 };
+
+export const data = {} as Awaited<ReturnType<typeof loader.load>>;
+
+export default loader;

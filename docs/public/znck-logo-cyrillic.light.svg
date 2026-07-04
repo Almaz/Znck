@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id="znck-logo-cyrillic">
+  <g transform="translate(0.5 0.5)" stroke="#35139a" stroke-width="1.89162" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 3,3 H 10 L 6.733333,6.266667 10,10 3,10.933333" />
+    <path d="M 13,3 v 7 -3.266667 h 7 V 9.066667 3" />
+    <path d="M 3,13.733333 v 3.266667 l 7,0.933333 V 12.8 20" />
+    <path d="M 13,13 v 7" />
+    <path d="M 20,12 14.891963,17 20,20" />
+  </g>
+</svg>

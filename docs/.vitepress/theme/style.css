@@ -1,15 +1,15 @@
 :root {
-  --vp-c-brand: #f56565;
-  --vp-c-brand-light: #f67373;
-  --vp-c-brand-lighter: #f89191;
-  --vp-c-brand-dark: #dc5a5a;
-  --vp-c-brand-darker: #c45050;
+  --vp-c-brand: #35139a;
+  --vp-c-brand-light: #4a24b4;
+  --vp-c-brand-lighter: #6842d2;
+  --vp-c-brand-dark: #2a0f7b;
+  --vp-c-brand-darker: #210c62;
 
-  --vp-c-brand-1: #f67373;
-  --vp-c-brand-2: #ff7070;
-  --vp-c-brand-3: #f56565;
-  --vp-c-brand-4: #dc5a5a;
-  --vp-c-brand-5: #c45050;
+  --vp-c-brand-1: #35139a;
+  --vp-c-brand-2: #4a24b4;
+  --vp-c-brand-3: #35139a;
+  --vp-c-brand-4: #2a0f7b;
+  --vp-c-brand-5: #210c62;
 
   --vp-c-bg-alt-up: #fff;
   --vp-c-bg-alt-down: #fff;
@@ -35,6 +35,20 @@
 }
 
 .dark {
+  --vp-c-brand: #a19bf1;
+  --vp-c-brand-light: #b4aff5;
+  --vp-c-brand-lighter: #cac6f8;
+  --vp-c-brand-dark: #8d85ee;
+  --vp-c-brand-darker: #746be8;
+
+  --vp-c-brand-1: #a19bf1;
+  --vp-c-brand-2: #b4aff5;
+  --vp-c-brand-3: #a19bf1;
+  --vp-c-brand-4: #8d85ee;
+  --vp-c-brand-5: #746be8;
+
+  --znck-c-brand-secondary: #8d85ee;
+
   --vp-c-bg-alt-up: #1b1b1d;
   --vp-c-bg-alt-down: #0f0f10;
 
@@ -152,6 +166,11 @@ html {
   .VPHomeHero .container {
     flex-direction: row;
   }
+}
+
+  /* Отступ разделителя меню шапки слева */
+.VPNavBar .divider {
+  margin-left: calc(var(--scrollbar-width, 0px) - 7px);
 }
 
 .VPNavBarHamburger .container > span {

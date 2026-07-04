@@ -66,12 +66,12 @@ const customizingActive = computed(() => {
     :class="{ customized: customizingActive }"
   >
     <div class="card-header">
-      <h2 class="card-title">Customizer</h2>
+      <h2 class="card-title">Настройщик</h2>
       <ResetButton @click="resetStyle"></ResetButton>
     </div>
     <InputField
       id="icon-color"
-      label="Color"
+      label="Цвет"
     >
       <ColorPicker
         v-model="color"
@@ -82,7 +82,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="stroke-width"
-      label="Stroke width"
+      label="Толщина линии"
     >
       <template #display>
         <span class="customize-label">{{ strokeWidth }}px</span>
@@ -99,7 +99,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="size"
-      label="Size"
+      label="Размер"
     >
       <template #display>
         <span class="customize-label">{{ size }}px</span>
@@ -116,7 +116,7 @@ const customizingActive = computed(() => {
 
     <InputField
       id="absolute-stroke-width"
-      label="Absolute stroke width"
+      label="Абсолютная толщина"
     >
       <Switch
         id="absolute-stroke-width"
@@ -145,7 +145,7 @@ const customizingActive = computed(() => {
 
 .customizer-card {
   background: var(--vp-c-bg);
-  padding: 12px 24px 24px;
+  padding: 12px;
   border-radius: 12px;
   margin-bottom: 24px;
   position: relative;

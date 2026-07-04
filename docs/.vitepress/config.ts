@@ -51,6 +51,12 @@ export default defineConfig({
           ),
         },
         {
+          find: /^.*\/VPNavBarTitle\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/overrides/VPNavBarTitle.vue', import.meta.url),
+          ),
+        },
+        {
           find: /^.*\/VPFooter\.vue$/,
           replacement: fileURLToPath(
             new URL('./theme/components/overrides/VPFooter.vue', import.meta.url),
